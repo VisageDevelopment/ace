@@ -42,10 +42,10 @@
         editor.setOption("enableLiveAutocompletion", true);
         editor.setOption("cursorStyle", "smooth");
         editor.setShowPrintMargin(false);
-        // document.getElementById('editor').style.fontSize='13px';
         editor.setOptions({
             fontFamily: "JetBrains Mono",
-            fontSize: "10pt"
+            fontSize: "10pt",
+            customScrollbar: true
         });
 
         /* do not edit below - Synapse X internal code */
@@ -70,6 +70,7 @@
           editor.setTheme("ace/theme/" + th);
         }
 
+        // Might change this to work with Visage
         editor.on("input", async function() 
         {
           await CefSharp.BindObjectAsync("synServiceAsync");
